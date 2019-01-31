@@ -36,7 +36,7 @@ class Camera2 implements CameraInterface
     }
 }
 
-class Iphone
+abstract class Iphone
 {
     protected $version;
 
@@ -53,10 +53,7 @@ class Iphone
         return $this->version;
     }
 
-    public function setCamera(CameraInterface $camera)
-    {
-        $this->camera = $camera;
-    }
+    abstract public function setCamera(CameraInterface $camera);
 
     public function takePhoto()
     {
