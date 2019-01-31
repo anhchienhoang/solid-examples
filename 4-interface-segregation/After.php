@@ -6,7 +6,17 @@ interface Animal
     public function walk();
 }
 
-class Dog implements Animal
+interface FlyingAnimal extends Animal
+{
+    public function fly();
+}
+
+interface BarkingAnimal extends Animal
+{
+    public function bark();
+}
+
+class Dog implements BarkingAnimal
 {
     public function __construct()
     {
@@ -24,7 +34,7 @@ class Dog implements Animal
     }
 }
 
-class Bird implements Animal
+class Bird implements FlyingAnimal
 {
     public function __construct()
     {
